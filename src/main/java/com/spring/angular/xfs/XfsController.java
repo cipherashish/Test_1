@@ -34,7 +34,7 @@ public class XfsController {
 		  xfsRepository.save(xfs);
     }
 	
-	  @GetMapping(value = "/hello")
+	  @RequestMapping(value = "/hello")
 	   public String hello() {
 	      return "Hello World";
 }
