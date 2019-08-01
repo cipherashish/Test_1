@@ -34,7 +34,7 @@ pipeline{
         
       stage ('Deploying War File'){
              steps{
-                  withCredentials([usernamePassword(credentialsId: 'ashish_tomcat', passwordVariable: 'pass', usernameVariable: 'userId')])
+                  withCredentials([usernamePassword(credentialsId: 'tomcat_ashish', passwordVariable: 'pass', usernameVariable: 'userId')])
                   {
         
                      sh 'curl -u  $userId:$pass  http://ec2-13-232-255-41.ap-south-1.compute.amazonaws.com:8080/manager/text/undeploy?path=/Backend_XFS'
